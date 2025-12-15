@@ -1,0 +1,20 @@
+from django.urls import path, include
+from rest_framework.routers import DefaultRouter
+
+from events.views import EventViewSet, EventRegistrationViewSet
+
+router = DefaultRouter()
+router.register(r'events', EventViewSet, basename='events')
+router.register(r'registrations', EventRegistrationViewSet, basename='registrations')
+
+urlpatterns = [
+    path('', include(router.urls)),
+
+    path(
+        'events/<uuid:event_id>/registrations/',
+        EventRegistrationViewSet.as_view({
+            'get': 'list'
+        }),
+        name='event-registrations'
+    )
+]

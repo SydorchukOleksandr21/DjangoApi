@@ -1,0 +1,61 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+.eggs/
+*.manifest
+*.spec
+
+# Virtual environment
+.venv/
+env/
+venv/
+ENV/
+
+# Django
+*.log
+*.pot
+*.pyc
+db.sqlite3
+media/
+staticfiles/
+django_admin_log.txt
+
+# Migrations
+*/migrations/*.pyc
+*/migrations/__pycache__/
+*/migrations/*.py[cod]
+*/migrations/*.py~
+
+# VS Code / JetBrains
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Environment variables
+.env
+
+# Docker
+docker-compose.override.yml
+**/docker-compose.override.yml
+*.env
+
+# Celery
+celerybeat-schedule
+celerybeat.pid
+
+# Pytest
+.cache/
+.pytest_cache/
+htmlcov/
+.coverage
+
+# OS files
+.DS_Store
+Thumbs.db

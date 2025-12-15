@@ -1,0 +1,2 @@
+from .event import EventSerializer
+from .event_registration import EventRegistrationSerializerWithEvent
