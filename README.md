@@ -101,6 +101,8 @@ The web service is available at `http://localhost:8000/`.
 * Registrations endpoint allows users to register for events and view their registrations.
 * Event organizers can view all registrations for their events and delete odd users.
 
+More information can be found at `/api/docs/`
+
 ## Email Notifications
 
 * Users receive asynchronous email notifications upon successful event registration.

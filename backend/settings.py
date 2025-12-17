@@ -41,7 +41,8 @@ INSTALLED_APPS = [
     'django_extensions',
     'django_filters',
     'users',
-    'events'
+    'events',
+    'drf_spectacular'
 ]
 
 REST_FRAMEWORK = {
@@ -52,7 +53,8 @@ REST_FRAMEWORK = {
     'PAGE_SIZE': 10,
     'PAGE_QUERY_PARAM': 'page',
     'PAGE_SIZE_QUERY_PARAM': 'page_size',
-    'MAX_PAGE_SIZE': 50
+    'MAX_PAGE_SIZE': 50,
+    'DEFAULT_SCHEMA_CLASS': 'drf_spectacular.openapi.AutoSchema'
 }
 
 MIDDLEWARE = [
@@ -152,3 +154,10 @@ CELERY_TIMEZONE = 'UTC'
 # email
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 DEFAULT_FROM_EMAIL = "no-reply@django-api.local"
+
+SPECTACULAR_SETTINGS = {
+    'TITLE': 'Django API',
+    'DESCRIPTION': 'Documentation',
+    'VERSION': '1.0.0',
+    'SERVE_INCLUDE_SCHEMA': False,
+}
